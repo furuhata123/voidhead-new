@@ -1,7 +1,7 @@
 const { DateTime } = require("luxon");
-const excerpt = require('eleventy-plugin-excerpt');
 module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy({ "public/assets": "assets" });
+    eleventyConfig.addPassthroughCopy({ "src/assets"});
 
     eleventyConfig.addCollection("blog", function (collectionApi) {
         return collectionApi.getFilteredByTag("blog");
@@ -35,8 +35,8 @@ module.exports = function (eleventyConfig) {
     
 
 
-
     return {
+        pathPrefix: "/voidhead-new/",
         dir: {
             input: "src",
             includes: "_includes",
