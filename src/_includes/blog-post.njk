@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>{{ title or "VOIDHEAD" }}</title>
+    <link rel="stylesheet" href="/assets/blog-post.css">
+
+  </head>
+  <body>
+    <div class="wrapper">
+        <aside class="sidebar">
+    <a href="/blog/">
+    <div class="serio" id="back-button">
+    <span class="block-line"><span style="color:#00ff6b">←&nbsp;</span><span><span style="color:#2aff00">B</span><span style="color:#ff9300">A</span><span style="color:#c000ff">C</span><span style="color:#ff00c7">K</span></span></span>
+</div>
+    </a>
+    <p style="margin-top:1em;">这是一篇<br/>属于 Shiro酱 的文章</p>
+  </aside>
+
+      <main>
+        <div id="post-header"></div>
+        <a href="{{ url }}">{{ title }}</a>
+      </br>
+      <small>
+        {{ date | date("yyyy-MM-dd") }}
+      </small>
+      {{ content | safe }}
+      </br>
+      <p>Tags:
+      &nbsp
+      {{ tags | safe }} </p>
+    </main>
+
+  </div>
+</body>
+</html>

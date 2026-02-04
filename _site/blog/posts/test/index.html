@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>我的第一篇文章</title>
+    <link rel="stylesheet" href="/assets/blog-post.css">
+
+  </head>
+  <body>
+    <div class="wrapper">
+        <aside class="sidebar">
+    <a href="/blog/">
+    <div class="serio" id="back-button">
+    <span class="block-line"><span style="color:#00ff6b">←&nbsp;</span><span><span style="color:#2aff00">B</span><span style="color:#ff9300">A</span><span style="color:#c000ff">C</span><span style="color:#ff00c7">K</span></span></span>
+</div>
+    </a>
+    <p style="margin-top:1em;">这是一篇<br/>属于 Shiro酱 的文章</p>
+  </aside>
+
+      <main>
+        <div id="post-header"></div>
+        <a href="">我的第一篇文章</a>
+      </br>
+      <small>
+        2024-01-01
+      </small>
+      <p>This solution works well, but I don't want to mark my excerpts manually. I feel pretty strongly that the content of the site should be kept as free as possible from technical implementation details. This feels like a good principle, and will also make the content as portable as possible.
+Another limitation of this solution is that the excerpt generated will be extracted from the raw content, rather than the rendered page. I use Markdown for my posts, so the excerpts I get using the built-in functionality will be snippets of the unprocessed Markdown source. Stripping Markdown formatting from text is a lot trickier than e.g. stripping HTML, as there is no common formatting of control characters etc. I'm sure there are clever regular expressions out there that solves this, but I feel more confident stripping out HTML. Another common approach is to manually run the excerpt through the markdown-it processor used by Eleventy, but I always thought that felt a bit clunky and unnecessary. The page will be processed by markdown-it as part of the site rendering anyway, why do it again just to generate an excerpt?</p>
+
+      </br>
+      <p>Tags:
+      &nbsp
+      blog,test </p>
+    </main>
+
+  </div>
+</body>
+</html>

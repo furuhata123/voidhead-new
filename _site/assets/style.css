@@ -1,0 +1,386 @@
+@font-face {
+  font-family: 'serio';
+  src: url('/assets/fonts/SERIO.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+*::-webkit-scrollbar {
+  width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #08aa98;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #e1e100;
+  border-radius: 0px;
+  border: 0px none #ffffff;
+}
+
+body {
+  background: #bdbdbd;
+  color: #333;
+  font-family: "Inter", sans-serif;
+
+  padding: 0;
+  margin: 0;
+
+}
+
+html,
+body {
+  max-height: 100vh;
+  margin: 0;
+}
+
+.wrapper {
+  max-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  /* 让它至少占满整个视口高度 */
+
+  overflow: hidden;
+  position: relative;
+}
+
+
+
+header {
+  display: flex;
+  justify-content: space-between;
+  background: #000088;
+  background: linear-gradient(0deg, rgba(0, 0, 136, 1) 0%, rgba(0, 0, 251, 1) 65%, rgba(117, 117, 255, 1) 100%);
+  padding: 0.5rem 1rem;
+
+  border: #bdbdbd solid;
+  border-width: 0px 10px;
+  height: 70px;
+  width: auto;
+  aspect-ratio: 16 / 5;
+  max-height: 400px;
+  overflow: hidden;
+}
+
+.header-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+main {
+  flex: 1;
+  background-color: #bdbdbd;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+footer {
+  background: #00ffea;
+  text-align: center;
+  padding: 0;
+  font-size: 0.875rem;
+  margin: 0;
+
+}
+
+/*main structure above */
+
+/* effects */
+
+
+/* 左侧撕纸边 */
+.torn-left {
+  clip-path: polygon(100% 0%, 94% 3%, 97% 5%, 95% 7%, 90% 10%,
+      95% 13%, 92% 15%, 90% 17%, 97% 20%, 90% 22%,
+      90% 25%, 95% 28%, 98% 32%, 90% 38%, 87% 40%, 95% 50%, 90% 55%, 97% 57%, 95% 60%, 90% 68%,
+      96% 70%, 93% 74%, 98% 79%, 95% 85%, 91% 90%, 97% 93%, 94% 97%,
+      100% 100%, 0% 100%, 0% 0%);
+}
+
+
+
+/* 实色阴影 */
+.ripped-edge {
+  content: "";
+  position: absolute;
+  inset: 0;
+  clip-path: polygon(100% 0%, 94% 3%, 97% 5%, 95% 7%, 90% 10%,
+      95% 13%, 92% 15%, 90% 17%, 97% 20%, 90% 22%,
+      90% 25%, 95% 28%, 98% 32%, 90% 38%, 87% 40%, 95% 50%, 90% 55%, 97% 57%, 95% 60%, 90% 68%,
+      96% 70%, 93% 74%, 98% 79%, 95% 85%, 91% 90%, 97% 93%, 94% 97%,
+      100% 100%, 0% 100%, 0% 0%);
+  background: white;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.shadow-box {
+  filter: drop-shadow(3px 7px 0 rgba(0, 0, 0));
+
+  top: 0;
+  right: 0;
+
+  z-index: 2;
+  position: absolute;
+  width: 150px;
+  max-height: 100vh;
+  padding: 2em;
+}
+
+
+.dotted-hover:hover {
+  background-image: radial-gradient(black 10%, transparent 10%);
+  background-size: 5px 5px;
+  background-repeat: repeat;
+  background-blend-mode: multiply;
+  color: white;
+
+}
+
+
+/*main content below */
+
+.main-home {
+/* if counter needs more height */
+/* flex:1; */
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  padding: 1rem;
+  padding-bottom: 0;
+  position: relative;
+  padding-right: 110px;
+  /* menu layer thing */
+  
+}
+
+.main-home .left {
+  width: 400px;
+  overflow-wrap: break-word;
+  word-break: break-all;
+  display: flex;
+  flex-direction: row;
+  background-color: #FFFFCC;
+  padding: 0.5rem;
+  margin-right: 0.5rem;
+
+  border: #08aa98 2px solid;
+}
+
+
+.main-home .center {
+  width: 1604px;
+  background-color: #FFFFCC;
+  padding: 0;
+  position: relative;
+  border: #08aa98 2px solid;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.garden {
+  display: flex;
+  /* ✅ 改为 flex 取代 table-cell */
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  width: 100%;
+  height: auto;
+  /* 不限制高度，让图片自己决定 */
+}
+
+
+.garden img {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: 80vh;
+  /* ✅ 这是防止它太高撑爆页面的关键 */
+  object-fit: contain;
+  display: block;
+}
+
+
+
+/* menu  styles */
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  /* 右对齐 */
+  top: 0;
+  right: 0;
+
+  z-index: 2;
+  position: absolute;
+  width: 170px;
+  max-height: 100vh;
+  overflow: hidden;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.menu a {
+  font-family: 'SERIO', sans-serif;
+  font-size: 2rem;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  padding: 0.5em 1em;
+  background: white;
+  transform: skewX(-15deg) rotate(-2deg);
+  transition: all 0.2s ease;
+  position: relative;
+  display: inline-block;
+}
+
+.menu a::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: cyan;
+  z-index: -1;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+
+}
+
+.menu a:hover::before {
+  transform: scaleX(1);
+  position: absolute;
+  z-index: -1;
+}
+
+.menu a:hover {
+  transform: scale(1.1) skewX(-15deg) rotate(2deg);
+  color: black;
+  background: yellow;
+
+}
+
+/*bulletin */
+.bulletin-frame {
+  position: absolute;
+  bottom: 10px;
+  right: 0;
+  z-index: 9999;
+  width: clamp(180px, 22vw, 300px);
+
+  padding: 0;
+}
+
+.bulletin-border {
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+.bulletin-content {
+  z-index: 10000;
+  color: black;
+
+  height: 55%;
+  width: 55%;
+  /* Center the content within the frame */
+  position: absolute;
+  top: 10%;
+  left: 22%;
+  overflow: scroll;
+  overflow-x: hidden;
+
+  /* font stuff */
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  text-align: left;
+}
+
+.bulletin-content h2 {
+  margin: 0.5rem;
+  font-size: 1.2rem;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.bulletin-content p {
+  margin: 0.5rem;
+  font-size: 1rem;
+  line-height: 1.4;
+  margin-top: 0;
+}
+
+
+.figure {
+  z-index: 5;
+  position: absolute;
+  bottom: 0;
+  left: 15%;
+  width: clamp(180px, 22vw, 320px);
+
+  animation: floaty 3s ease-in-out infinite;
+}
+
+.figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@keyframes floaty {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-5px) rotate(1deg);
+  }
+
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+}
+
+#ratseal {
+  z-index: 4;
+  position: fixed;
+  top: 130px;
+  left: 35px;
+  width: 100px;
+  height: auto;
+}
+
+#xushou {
+  z-index: 4;
+  position: fixed;
+  top: 50px;
+  right: 130px;
+  width: 150px;
+  height: auto;
+}
+
+#kongnao {
+  z-index: 4;
+  position: fixed;
+  bottom: 60px;
+  right: 350px;
+  width: 100px;
+  height: auto;
+}
