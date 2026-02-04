@@ -1,7 +1,7 @@
 const { DateTime } = require("luxon");
 module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy({ "public/assets": "assets" });
-    eleventyConfig.addPassthroughCopy({ "src/assets"});
+    eleventyConfig.addPassthroughCopy("src/assets");
 
     eleventyConfig.addCollection("blog", function (collectionApi) {
         return collectionApi.getFilteredByTag("blog");
