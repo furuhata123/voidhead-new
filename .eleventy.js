@@ -36,7 +36,7 @@ module.exports = function (eleventyConfig) {
 
 
     return {
-        pathPrefix: "/voidhead-new/",
+        pathPrefix: "/",
         dir: {
             input: "src",
             includes: "_includes",
