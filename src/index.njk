@@ -14,13 +14,13 @@ aaaa
 aa
 what
             </p>
-            <div clss="images">
-                <img src="/assets/main/bo02h.jpg"/>
-                <img src="/assets/main/bo02j.jpg"/>
-                <img src="/assets/main/bo02m.jpg"/>
+            <div class="images">
+                <img src="{{ '/assets/main/bo02h.jpg' | url }}"/>
+                <img src="{{ '/assets/main/bo02j.jpg' | url }}"/>
+                <img src="{{ '/assets/main/bo02m.jpg' | url }}"/>
                 
                 <a href="http://www.ankokukoubou.com/" target="_blank" rel="noopener noreferrer">
-                    <img src="http://www.ankokukoubou.com/etc/ankoku/ankokubanab1.gif" alt="暗黒工房"/>
+                    <img src="{{ '/assets/main/external/ankokubana.gif' | url }}" alt="暗黒工房"/>
                 </a>
 
             </div>
@@ -30,7 +30,7 @@ what
     <div class="center">
 
         <div class="garden">
-            <img src="/assets/main/garden.webp" alt="garden"/>
+            <img src="{{ '/assets/main/garden.webp' | url }}" alt="garden"/>
         </div>
 
     </div>
@@ -38,9 +38,9 @@ what
     <div class="shadow-box">
         <nav class="menu">
             <a class="torn-left" href="{{ '/blog' | url }}">blog</a>
-            <a class="torn-left dotted-hover" href="/about">about</a>
+            <a class="torn-left dotted-hover" href="{{ '/about' | url }}">about</a>
 
-            <a class="torn-left" href="/tool">tool</a>
+            <a class="torn-left" href="{{ '/tool' | url }}">tool</a>
 
         </nav>
     </div>

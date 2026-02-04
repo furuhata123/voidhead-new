@@ -1,7 +1,7 @@
 /* font control stuff */
 @font-face {
     font-family: 'serio';
-    src: url('/assets/fonts/SERIO.ttf') format('truetype');
+    src: url('../assets/fonts/SERIO.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -220,7 +220,7 @@ main {
 
 #blog-header {
     flex: 1;
-    background-image: url('/assets/blog/demin-alt.jpg');
+    background-image: url('../assets/blog/demin-alt.jpg');
     padding: 2em;
     margin: 0.5em;
     width: 90%;
@@ -228,7 +228,7 @@ main {
 
 #post-list {
     flex: 2;
-    background-image: url('/assets/blog/blue-demin.jpg');
+    background-image: url('../assets/blog/blue-demin.jpg');
     padding: 2em;
     margin: 0.5em;
     width: 90%;
@@ -267,7 +267,7 @@ ul {
 #readmore {
     display: inline-block;
     background-color: #ffc5c5;
-    background-image: url('/assets/blog/SB087.jpg');
+    background-image: url('../assets/blog/SB087.jpg');
     padding: 1em;
     position: relative;
     font-weight: bold;
@@ -287,7 +287,7 @@ ul {
     position: absolute;
     top: 3%;
     right: 5%;
-    background-image: url('/assets/sky_back.gif');
+    background-image: url('../assets/blog/sky_back.gif');
     background-size: cover;
     background-position: center;
     border-radius: 50% 50% 40% 60% / 60% 40% 50% 50%;

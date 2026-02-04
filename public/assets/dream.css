@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'drunk';
-    src: url('/assets/fonts/drunk.otf');
+    src: url('../assets/fonts/drunk.otf');
 }
 
 .dream-wrapper::-webkit-scrollbar {
@@ -37,7 +37,7 @@
 }
 
 body {
-    background-image: url('/assets/dream/waves.gif');
+    background-image: url('../assets/dream/waves.gif');
     display: flex;
     flex-direction: column;
     justify-content: center;

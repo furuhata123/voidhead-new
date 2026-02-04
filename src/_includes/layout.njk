@@ -3,20 +3,21 @@
   <head>
     <meta charset="UTF-8"/>
     <title>{{ title or "VOIDHEAD" }}</title>
-    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="{{'/assets/style.css' | url }}">
 
   </head>
   <body>
     <div class="wrapper">
       <div class="figure">
-        <img src="/assets/main/figure.webp" alt="mascot"/>
+        <img src="{{'/assets/main/figure.webp' | url }}" alt="mascot"/>
       </div>
       <div class="bulletin-frame">
-        <img src="/assets/main/bulletin-border.png" class="bulletin-border"/>
+        <img src="{{'/assets/main/bulletin-border.png' | url }}" class="bulletin-border"/>
         <div class="bulletin-content">
           <h2>公告栏</h2></br>
           <p>
           To-do list</br>
+          </p>
           <ul>
             <li>Fix layout issues on mobile devices</li>
             <li>Add more decors </li>
@@ -26,13 +27,13 @@
             <li>Draw more stuffs for the site</li>
             <li> Make a github repository and publish it? on github host, and make a neocities? redirect</li>
           </ul>
-          </P>
+          
   </div>
 </div>
 <header>
-  <img src="/assets/main/header.webp" alt="Header Image" class="header-image"/>
+  <img src="{{'/assets/main/header.webp' | url }}" alt="Header Image" class="header-image"/>
   <a href="mailto:thulium69@outlook.com">
-    <img src="/assets/main/b_dol8.gif" alt="Email" id="email-icon"/>
+    <img src="{{'/assets/main/b_dol8.gif' | url }}" alt="Email" id="email-icon"/>
   </a>
 </header>
 
@@ -44,9 +45,9 @@
   <small>placeholder for counter?</small>
 </footer>
 
-<img src="/assets/main/ratseal.png" alt="rat seal" id="ratseal"/>
-<img src="/assets/main/xushou.png" alt="xushou" id="xushou"/>
-<img src="/assets/main/kongnao.png" alt="kongnao" id="kongnao"/>
+<img src="{{ '/assets/main/ratseal.png' | url }}" alt="rat seal" id="ratseal"/>
+<img src="{{ '/assets/main/xushou.png' | url }}" alt="xushou" id="xushou"/>
+<img src="{{'/assets/main/kongnao.png' | url }}" alt="kongnao" id="kongnao"/>
 </div>
 </body>
 </html>

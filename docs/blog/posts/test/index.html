@@ -2,14 +2,14 @@
 <html lang="zh">
   <head>
     <meta charset="UTF-8"/>
-    <title>我的第一篇文章</title>
-    <link rel="stylesheet" href="/assets/blog-post.css">
+    <title>Dev Log</title>
+    <link rel="stylesheet" href="/voidhead-new/assets/blog-post.css">
 
   </head>
   <body>
     <div class="wrapper">
         <aside class="sidebar">
-    <a href="/blog/">
+    <a href="/voidhead-new/blog/">
     <div class="serio" id="back-button">
     <span class="block-line"><span style="color:#00ff6b">←&nbsp;</span><span><span style="color:#2aff00">B</span><span style="color:#ff9300">A</span><span style="color:#c000ff">C</span><span style="color:#ff00c7">K</span></span></span>
 </div>
@@ -19,13 +19,21 @@
 
       <main>
         <div id="post-header"></div>
-        <a href="">我的第一篇文章</a>
+        <a href="">Dev Log</a>
       </br>
       <small>
         2024-01-01
       </small>
-      <p>This solution works well, but I don't want to mark my excerpts manually. I feel pretty strongly that the content of the site should be kept as free as possible from technical implementation details. This feels like a good principle, and will also make the content as portable as possible.
-Another limitation of this solution is that the excerpt generated will be extracted from the raw content, rather than the rendered page. I use Markdown for my posts, so the excerpts I get using the built-in functionality will be snippets of the unprocessed Markdown source. Stripping Markdown formatting from text is a lot trickier than e.g. stripping HTML, as there is no common formatting of control characters etc. I'm sure there are clever regular expressions out there that solves this, but I feel more confident stripping out HTML. Another common approach is to manually run the excerpt through the markdown-it processor used by Eleventy, but I always thought that felt a bit clunky and unnecessary. The page will be processed by markdown-it as part of the site rendering anyway, why do it again just to generate an excerpt?</p>
+      <h2>Goals:</h2>
+<ul>
+<li>Building a personal site using 11ty</li>
+<li>Minimun bugs &amp; brutal force</li>
+</ul>
+<h2>Problems encountered</h2>
+<h3>Deploy</h3>
+<h4>1. No 'pathPrefix' in .js</h4>
+<p>This will bomb all pathes in Github pages.
+And you have to use /voidhead-new/.../ in njks, <a href="https://github.com/11ty/eleventy/issues/648">I think there are more solutions in this issue </a>, however, this doesn't work in non-njk files. An alternative way is using relative path: '../assets/...'</p>
 
       </br>
       <p>Tags:

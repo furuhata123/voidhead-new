@@ -19,7 +19,7 @@ title: Blog
 
   <aside id="sidebar">
     <div id="avatar">
-      <img src="/assets/blog/avatar.png" alt="Avatar" >
+      <img src="{{ '/assets/blog/avatar.png'| url }}" alt="Avatar" >
       <small style="color: grey;">©쵸지</small>
     </div>
 
@@ -35,16 +35,16 @@ title: Blog
         </h2>
         <ul>
           <li>
-            <a href="/blog/tags/blog">Blog</a>
+            <a href="{{ '/blog/tags/blog' | url }}">Blog</a>
           </li>
           <li>
-            <a href="/tags/javascript">JavaScript</a>
+            <a href="{{ '/tags/javascript' | url }}">JavaScript</a>
           </li>
           <li>
-            <a href="/tags/css">CSS</a>
+            <a href="{{ '/tags/css' | url }}">CSS</a>
           </li>
           <li>
-            <a href="/tags/tutorials">Tutorials</a>
+            <a href="{{ '/tags/tutorials' | url }}">Tutorials</a>
           </li>
         </ul>
       </div>
@@ -61,18 +61,18 @@ title: Blog
         </h2>
         <ul>
           <li>
-            <a href="/about">About Me</a>
+            <a href="{{ '/about' | url }}">About Me</a>
           </li>
           <li>
-            <a href="/contact">Contact</a>
+            <a href="{{ '/contact' | url }}">Contact</a>
           </li>
           <li>
-            <a href="/archive">Archive</a>
+            <a href="{{ '/archive' | url }}">Archive</a>
           </li>
         </ul>
       </div>
 
-      <img src="/assets/blog/tail.png" alt="Decorative Image" style="width: 40%; margin-top: 20px; margin-left: auto; margin-right: auto; display: block;">
+      <img src="{{ '/assets/blog/tail.png'| url}}" alt="Decorative Image" style="width: 40%; margin-top: 20px; margin-left: auto; margin-right: auto; display: block;">
       <small style="color: grey;">©쵸지</small>
     </div>
   </aside>
@@ -99,7 +99,7 @@ title: Blog
       {% for post in collections.blog %}
         <li>
           <div class="post">
-            <a class="post-title" href="{{ post.url }}">{{ post.data.title }}</a>
+            <a class="post-title" href="{{ post.url | url }}">{{ post.data.title }}</a>
             <small>
               {{ post.date | date("yyyy-MM-dd") }}
             </small>
@@ -108,7 +108,7 @@ title: Blog
             <div id="excerpt">{{ post.data.page.excerpt }}
             &nbsp;
             <span id="readmore">
-                <a href="{{ post.url }}"  class="serio">
+                <a href="{{ post.url | url }}"  class="serio">
                    <span class="block-line"><span><span style="color:#ff6500">R</span><span style="color:#002dff">e</span><span style="color:#ff004b">a</span><span style="color:#9400D3">d&nbsp;</span></span><span><span style="color:#00aaff">m</span><span style="color:#ff00c4">o</span><span style="color:#9400D3">r</span><span style="color:#FF7F00">e</span><span style="color:#ff004e">.</span><span style="color:#00d6ff">.</span><span style="color:#00ff98">.</span></span></span>
                 </a>
               </span>
@@ -123,12 +123,12 @@ title: Blog
 </main>
 
 <div id="dream">
-<a href="/dream">My Dream</a>
+<a href="{{ '/dream' | url }}">My Dream</a>
 </div>
 
 <div id="back-home" class="serio">
-  <a href="/">
-  <img src="/assets/blog/backhome.webp" alt="Back to home" />
+  <a href="{{ '/' |url }}">
+  <img src="{{ '/assets/blog/backhome.webp' | url}}" alt="Back to home" />
   </a>
   </div>
 </div>

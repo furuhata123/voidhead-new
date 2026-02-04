@@ -3,13 +3,13 @@
   <head>
     <meta charset="UTF-8"/>
     <title>{{ title or "Shiro的小屋" }}</title>
-    <link rel="stylesheet" href="/assets/dream.css">
+    <link rel="stylesheet" href="{{ '/assets/dream.css' | url }}">
 
   </head>
   <body>
     <h1 id="title">
       The Shore
-      <img src='/assets/dream/shipline.gif' alt='The Ship' id='ship'/>
+      <img src="{{ '/assets/dream/shipline.gif' | url }}" alt='The Ship' id='ship'/>
       </h1>
     
     <div class="dream-info">
@@ -17,7 +17,7 @@
     Thoes data are available for download in .json format.
   </p>
 
-      <a href="/assets/dream/dream.json" download class="dream-download">
+      <a href="{{ '/assets/dream/dream.json' | url }}" download class="dream-download">
     ⭳ Download
   </a>
     </div>
@@ -41,7 +41,7 @@
 
     <footer>
       <a href="mailto:thulium69@outlook.com">
-        <img src="/assets/dream/sendnow.gif" alt="Email" id="email-icon"/>
+        <img src="{{ '/assets/dream/sendnow.gif' | url }}" alt="Email" id="email-icon"/>
       </a>
     </footer>
   </body>
