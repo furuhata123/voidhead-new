@@ -110,7 +110,7 @@ h1 {
     background: rgba(255, 255, 255, 0.35);
     padding: 1em 1.2em;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-    border: 2px dashed #bff2e0;
+    border: 2px dashed #6c9788;
     backdrop-filter: blur(4px);
     color: #333;
     transition: transform 0.2s ease;
@@ -119,6 +119,7 @@ h1 {
 .dream-card:hover {
     transform: translateY(-3px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border: 2px dashed #bff2e0;
 }
 
 .dream-card h2 {
