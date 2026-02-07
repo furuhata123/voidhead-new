@@ -7,13 +7,19 @@ title: 首页
 
     <div class="left" id="sidebar">
         <div class="miscbox">
-            <p>占位占位占位aaaaaaaaaaaaaaaaaaa
-dfsfsdnksjdnkjsnksjvnjfdnkfnbjnkjnsjkdcndkjnkjcnakscnkjn
-available
-aaaa
-aa
-what
+            <img src="{{ '/assets/main/mainsite.gif' | url }}" alt="void-banner" style="height:88px;"/>
+            <p>
+                Likey? Feel free to link me:
             </p>
+            <div class="code-wrapper">
+                <button class="copy-btn">Copy</button>
+                <pre class="code-block" id="code-to-copy">
+&lt;a href="https://voidhead.net/" target="_blank" rel="voidhead"&gt;
+    &lt;img src="https://voidhead.net/assets/main/mainsite.gif" alt="voidhead.net" style="height:31px;" /&gt;
+&lt;/a&gt;
+  </pre>
+            </div>
+
             <div class="images">
                 <img src="{{ '/assets/main/bo02h.jpg' | url }}"/>
                 <img src="{{ '/assets/main/bo02j.jpg' | url }}"/>
@@ -21,6 +27,10 @@ what
 
                 <a href="http://www.ankokukoubou.com/" target="_blank" rel="noopener noreferrer">
                     <img src="{{ '/assets/main/external/ankokubana.gif' | url }}" alt="暗黒工房"/>
+                </a>
+                <p>放图的:</p>
+                <a href="http://pratibimba.neocities.org" target="_blank" rel="pratibimba">
+                    <img src="{{ '/assets/main/pratibimba.gif' | url }}" alt="pratibimba-banner" style="height:31px;"/>
                 </a>
 
             </div>
@@ -31,25 +41,21 @@ what
 
         <div class="garden">
             <picture>
-            <source srcset="{{ '/assets/main/garden-mob.webp' | url }}" media="(max-width: 768px)">
-            <img src="{{ '/assets/main/garden.webp' | url }}" alt="garden"/>
-        </picture>
+                <source srcset="{{ '/assets/main/garden-mob.webp' | url }}" media="(max-width: 768px)">
+                <img src="{{ '/assets/main/garden.webp' | url }}" alt="garden"/>
+            </picture>
+        </div>
+
     </div>
 
-</div>
+    <div class="shadow-box" id="top-menu">
+        <nav class="menu">
+            <a class="torn-left" href="{{ '/blog' | url }}">blog</a>
+            <a class="torn-left dotted-hover" href="{{ '/dream' | url }}">dream</a>
 
-<div class="shadow-box" id="top-menu">
-    <nav class="menu">
-        <a class="torn-left" href="{{ '/blog' | url }}">blog</a>
-        <a class="torn-left dotted-hover" href="{{ '/about' | url }}">about</a>
+            <a class="torn-left" href="{{ '/hobby' | url }}">hobby</a>
 
-        <a class="torn-left" href="{{ '/tool' | url }}">tool</a>
+        </nav>
+    </div>
 
-    </nav>
-</div>
-
-  <div class="floating-announcement">
-    <button id="announce-toggle">📜 Announce</button>
-    <div class="announce-box hidden"> ... </div>
-  </div>
 </section>

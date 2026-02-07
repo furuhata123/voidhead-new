@@ -101,6 +101,7 @@ body {
   padding: 0;
   margin: 0;
 
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 html,
@@ -213,16 +214,6 @@ footer {
 }
 
 
-.dotted-hover:hover {
-  background-image: radial-gradient(black 10%, transparent 10%);
-  background-size: 5px 5px;
-  background-repeat: repeat;
-  background-blend-mode: multiply;
-  color: white;
-
-}
-
-
 /*main content below */
 
 .main-home {
@@ -251,6 +242,53 @@ footer {
 
   border: #08aa98 2px solid;
 }
+
+pre.code-block {
+  background: #fdfdfd;
+  border: 1px solid #ccc;
+  padding: 8px 12px;
+  font-family: "Courier New", monospace;
+  font-size: 13px;
+  color: #333;
+  overflow-x: auto;
+  max-width: 100%;
+  line-height: 1.4;
+  white-space: pre-wrap;  
+  word-break: break-word; 
+  box-shadow: inset 0 0 4px rgba(0,0,0,0.1);
+  margin: 10px 0;
+
+  text-align: left;
+  width: 310px;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.code-wrapper {
+  position: relative;
+  max-width: 100%;
+}
+
+.copy-btn {
+  position: absolute;
+  bottom: 6px;
+  left: 6px;
+  font-size: 12px;
+  background: #333;
+  color: white;
+  border: none;
+  padding: 4px 8px;
+  cursor: pointer;
+  font-family: monospace;
+  border-radius: 4px;
+  z-index: 2;
+}
+
+.copy-btn:hover {
+  background: #555;
+}
+
+
 
 
 .main-home .center {
@@ -382,7 +420,7 @@ footer {
   overflow-x: hidden;
 
   /* font stuff */
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  
   text-align: left;
 }
 

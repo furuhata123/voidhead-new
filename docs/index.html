@@ -20,13 +20,10 @@
           To-do list</br>
       </p>
       <ul>
-        <li>Fix layout issues on mobile devices</li>
-        <li>Add more decors </li>
         <li>Add more content to the blog section</li>
-        <li>Make a link banner?</li>
-        <li>About(hobby actually?) and free material page</li>
+        <li>Make a guestbook</li>
+        <li>About(hobby actually?) and <del>free material page</del></li>
         <li>Draw more stuffs for the site</li>
-        <li> Make a github repository and publish it? on github host, and make a neocities? redirect</li>
       </ul>
 
     </div>
@@ -44,13 +41,19 @@
 
     <div class="left" id="sidebar">
         <div class="miscbox">
-            <p>占位占位占位aaaaaaaaaaaaaaaaaaa
-dfsfsdnksjdnkjsnksjvnjfdnkfnbjnkjnsjkdcndkjnkjcnakscnkjn
-available
-aaaa
-aa
-what
+            <img src="/assets/main/mainsite.gif" alt="void-banner" style="height:88px;"/>
+            <p>
+                Likey? Feel free to link me:
             </p>
+            <div class="code-wrapper">
+                <button class="copy-btn">Copy</button>
+                <pre class="code-block" id="code-to-copy">
+&lt;a href="https://voidhead.net/" target="_blank" rel="voidhead"&gt;
+    &lt;img src="https://voidhead.net/assets/main/mainsite.gif" alt="voidhead.net" style="height:31px;" /&gt;
+&lt;/a&gt;
+  </pre>
+            </div>
+
             <div class="images">
                 <img src="/assets/main/bo02h.jpg"/>
                 <img src="/assets/main/bo02j.jpg"/>
@@ -58,6 +61,10 @@ what
 
                 <a href="http://www.ankokukoubou.com/" target="_blank" rel="noopener noreferrer">
                     <img src="/assets/main/external/ankokubana.gif" alt="暗黒工房"/>
+                </a>
+                <p>放图的:</p>
+                <a href="http://pratibimba.neocities.org" target="_blank" rel="pratibimba">
+                    <img src="/assets/main/pratibimba.gif" alt="pratibimba-banner" style="height:31px;"/>
                 </a>
 
             </div>
@@ -68,27 +75,23 @@ what
 
         <div class="garden">
             <picture>
-            <source srcset="/assets/main/garden-mob.webp" media="(max-width: 768px)">
-            <img src="/assets/main/garden.webp" alt="garden"/>
-        </picture>
+                <source srcset="/assets/main/garden-mob.webp" media="(max-width: 768px)">
+                <img src="/assets/main/garden.webp" alt="garden"/>
+            </picture>
+        </div>
+
     </div>
 
-</div>
+    <div class="shadow-box" id="top-menu">
+        <nav class="menu">
+            <a class="torn-left" href="/blog">blog</a>
+            <a class="torn-left dotted-hover" href="/dream">dream</a>
 
-<div class="shadow-box" id="top-menu">
-    <nav class="menu">
-        <a class="torn-left" href="/blog">blog</a>
-        <a class="torn-left dotted-hover" href="/about">about</a>
+            <a class="torn-left" href="/hobby">hobby</a>
 
-        <a class="torn-left" href="/tool">tool</a>
+        </nav>
+    </div>
 
-    </nav>
-</div>
-
-  <div class="floating-announcement">
-    <button id="announce-toggle">📜 Announce</button>
-    <div class="announce-box hidden"> ... </div>
-  </div>
 </section>
   </main>
 
@@ -101,4 +104,21 @@ what
   <img src="/assets/main/kongnao.png" alt="kongnao" id="kongnao"/>
 </div>
 </body>
+
+<script>
+  document.querySelectorAll(".copy-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const pre = btn.nextElementSibling;
+      const text = pre.innerText;
+
+      navigator.clipboard.writeText(text).then(() => {
+        btn.textContent = "Copied!";
+        setTimeout(() => (btn.textContent = "Copy"), 1500);
+      }).catch(() => {
+        btn.textContent = "❌ Failed";
+      });
+    });
+  });
+</script>
+
 </html>

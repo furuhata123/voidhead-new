@@ -20,13 +20,10 @@
           To-do list</br>
       </p>
       <ul>
-        <li>Fix layout issues on mobile devices</li>
-        <li>Add more decors </li>
         <li>Add more content to the blog section</li>
-        <li>Make a link banner?</li>
-        <li>About(hobby actually?) and free material page</li>
+        <li>Make a guestbook</li>
+        <li>About(hobby actually?) and <del>free material page</del></li>
         <li>Draw more stuffs for the site</li>
-        <li> Make a github repository and publish it? on github host, and make a neocities? redirect</li>
       </ul>
 
     </div>
@@ -65,4 +62,21 @@
   <img src="/assets/main/kongnao.png" alt="kongnao" id="kongnao"/>
 </div>
 </body>
+
+<script>
+  document.querySelectorAll(".copy-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const pre = btn.nextElementSibling;
+      const text = pre.innerText;
+
+      navigator.clipboard.writeText(text).then(() => {
+        btn.textContent = "Copied!";
+        setTimeout(() => (btn.textContent = "Copy"), 1500);
+      }).catch(() => {
+        btn.textContent = "❌ Failed";
+      });
+    });
+  });
+</script>
+
 </html>
