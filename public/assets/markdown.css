@@ -110,17 +110,17 @@
   
   .post-content th,
   .post-content td {
-    border: 2px dashed #f2b5d4;  /* 内部虚线边框，可换布丁色！ */
+    border: 2px dashed #f2b5d4; 
     padding: 0.6em 0.9em;
     text-align: left;
   }
   
   .post-content th {
-    background-color: #f37a02; /* 淡粉标题行 */
+    background-color: #f37a02;
     color: #160098;
   }
   
   .post-content tr:nth-child(even) td {
-    background-color: #4af6c3; /* 条纹效果 */
+    background-color: #4af6c3; 
   }
   

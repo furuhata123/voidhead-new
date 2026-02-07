@@ -19,6 +19,80 @@
   border: 0px none #ffffff;
 }
 
+@media screen and (max-width: 768px){
+  body, main{
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  .figure{
+    display: none;
+  }
+
+  .main-home{
+    flex-direction: column-reverse !important;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 12px;
+  }
+
+  .garden img {
+    max-width: 100%;
+    height: auto;
+    max-height: 60vh;    
+  }
+
+  .main-home > * {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box;
+  }
+
+  .main-home .center {
+    padding: 0 8px;        
+  }
+
+  #top-menu {
+    position: fixed !important;
+    top: 56px;
+    z-index: 1000;
+    background: none;
+    box-shadow: none;
+    padding: 0;
+
+    display: flex;
+  justify-content: center;
+    width: max-content !important;
+  }
+  .menu{
+    flex-direction: row !important;
+    width: max-content !important;
+  }
+  .menu a{
+    padding: 0.25rem !important;
+  }
+
+  
+#ratseal {
+  top: 130px;
+  left: 35px;
+  width: 70px !important;
+}
+
+#xushou {
+  top: 50px;
+  right: 0 !important;
+  width: 150px;
+}
+
+#kongnao {
+  bottom: 60px;
+  right: 350px;
+  width: 80px !important;
+}
+}
+
 body {
   background: #bdbdbd;
   color: #333;
@@ -180,7 +254,8 @@ footer {
 
 
 .main-home .center {
-  width: 1604px;
+  width: 100%; 
+  max-width: 1604px; 
   background-color: #FFFFCC;
   padding: 0;
   position: relative;
@@ -195,7 +270,6 @@ footer {
 
 .garden {
   display: flex;
-  /* ✅ 改为 flex 取代 table-cell */
   align-items: center;
   justify-content: center;
   padding: 0;
@@ -210,7 +284,6 @@ footer {
   max-width: 100%;
   height: auto;
   max-height: 80vh;
-  /* ✅ 这是防止它太高撑爆页面的关键 */
   object-fit: contain;
   display: block;
 }
@@ -325,6 +398,10 @@ footer {
   font-size: 1rem;
   line-height: 1.4;
   margin-top: 0;
+}
+
+.floating-announcement {
+  display: none;
 }
 
 

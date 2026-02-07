@@ -5,7 +5,7 @@ title: 首页
 
 <section class="main-home">
 
-    <div class="left">
+    <div class="left" id="sidebar">
         <div class="miscbox">
             <p>占位占位占位aaaaaaaaaaaaaaaaaaa
 dfsfsdnksjdnkjsnksjvnjfdnkfnbjnkjnsjkdcndkjnkjcnakscnkjn
@@ -18,7 +18,7 @@ what
                 <img src="{{ '/assets/main/bo02h.jpg' | url }}"/>
                 <img src="{{ '/assets/main/bo02j.jpg' | url }}"/>
                 <img src="{{ '/assets/main/bo02m.jpg' | url }}"/>
-                
+
                 <a href="http://www.ankokukoubou.com/" target="_blank" rel="noopener noreferrer">
                     <img src="{{ '/assets/main/external/ankokubana.gif' | url }}" alt="暗黒工房"/>
                 </a>
@@ -30,18 +30,26 @@ what
     <div class="center">
 
         <div class="garden">
+            <picture>
+            <source srcset="{{ '/assets/main/garden-mob.webp' | url }}" media="(max-width: 768px)">
             <img src="{{ '/assets/main/garden.webp' | url }}" alt="garden"/>
-        </div>
-
+        </picture>
     </div>
 
-    <div class="shadow-box">
-        <nav class="menu">
-            <a class="torn-left" href="{{ '/blog' | url }}">blog</a>
-            <a class="torn-left dotted-hover" href="{{ '/about' | url }}">about</a>
+</div>
 
-            <a class="torn-left" href="{{ '/tool' | url }}">tool</a>
+<div class="shadow-box" id="top-menu">
+    <nav class="menu">
+        <a class="torn-left" href="{{ '/blog' | url }}">blog</a>
+        <a class="torn-left dotted-hover" href="{{ '/about' | url }}">about</a>
 
-        </nav>
-    </div>
+        <a class="torn-left" href="{{ '/tool' | url }}">tool</a>
+
+    </nav>
+</div>
+
+  <div class="floating-announcement">
+    <button id="announce-toggle">📜 Announce</button>
+    <div class="announce-box hidden"> ... </div>
+  </div>
 </section>
