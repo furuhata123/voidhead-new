@@ -16,6 +16,7 @@ body {
     padding: 2rem;
 
     overflow-y: scroll;
+    height: 100%;
 }
 
 .container {
@@ -24,6 +25,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding-top: 5vh;
+    padding-bottom: 5vh;
     position:absolute;
     top:0;
     left:7vw;

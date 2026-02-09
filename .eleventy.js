@@ -1,4 +1,4 @@
-const { DateTime } = require("luxon");
+    const { DateTime } = require("luxon");
 module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy({ "public/assets": "assets" });
     eleventyConfig.addPassthroughCopy("src/assets");
