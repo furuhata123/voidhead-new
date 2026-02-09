@@ -10,7 +10,7 @@
             <div class="guestbook-box">
                 <h1>
                     ---୨୧ ---Sign my guestbook!---୨୧ ---</h1>
-                <form name="guestbook" method="POST" action="/" netlify>
+                <form id="guestbook-form">
                     <input type="hidden" name="form-name" value="guestbook"/>
                     <input type="hidden" name="localtime" id="localtime">
 
@@ -92,6 +92,32 @@ messages.forEach(msg => {
   `;
   board.appendChild(card);
 });
+
+
+  const form = document.getElementById('guestbook-form');
+
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+
+    const data = {
+      name: form.name.value,
+      message: form.message.value,
+      localtime: new Date().toLocaleString(),
+      drawing: toDataURL
+    };
+
+    fetch("https://script.google.com/macros/s/AKfycbxBM9B6DrvGgU0WqukjUUNi8Fjh3MgZa8m-772R2cGkNAm5cL8wT7hKP4A9cSURbkkAow/exec", {
+      method: "POST",
+      body: JSON.stringify(data)
+    })
+    .then(res => res.text())
+    .then(txt => {
+      alert("Sent!");
+      form.reset();
+    })
+    .catch(err => alert("Error Senting"));
+  });
+
 
 fetch('/assets/messages.json')
     .then(res => res.json())
