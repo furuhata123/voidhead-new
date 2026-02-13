@@ -1,7 +1,7 @@
 ---
-title: 加速主义政治宣言
+title: 加速主义政治宣言/Accelerate Manifesto
 date: 1998-01-01
-tags: blog
+tags: blog, Translation
 
 ---
 作者：Alex Williams & Nick Srnicek

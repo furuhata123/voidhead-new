@@ -24,6 +24,13 @@
     border-radius: 0.2em;
   }
 
+  .post-content a{
+    color:#00b37d;
+  }
+  .post-content a:hover{
+    color:#ff6600;
+  }
+
   .post-content ul,
 .post-content ol {
   padding-left: 1.5em;
@@ -88,16 +95,23 @@
     top: 0;
   }
   
-  .post-content code {
-    background-color: #272822;
-    color: white;
-    font-family: "Courier New", monospace;
-    padding: 0.25rem;
-  }
   .post-content pre {
-
+    background-color: #323728;
     font-family: "Courier New", monospace;
+  
+    overflow-x: auto;    
+    max-width: 100%;  
+    padding: 0.5rem;
+    border-radius: 4px;
+    box-sizing: border-box;
   }
+  
+  .post-content code {
+    background: none;      
+    color: inherit;
+    font-family: inherit;
+  }
+  
   
   .post-content table {
     border-collapse: collapse;

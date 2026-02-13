@@ -2,7 +2,7 @@
 <html lang="zh">
   <head>
     <meta charset="UTF-8"/>
-    <title>喵喵</title>
+    <title>Dev Log</title>
     <link rel="stylesheet" href="/assets/blog-post.css">
 
     <link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-okaidia.min.css" rel="stylesheet"/>
@@ -34,55 +34,37 @@
 
       <main>
         <div id="post-header"></div>
-        <a href="">喵喵</a>
+        <a href="">Dev Log</a>
       </br>
       <small>
-        2024-01-02
+        2024-01-01
       </small>
       <div class="post-content">
-        <p>md语法样式测试
-喵
-<em>斜体 italic</em>用于突出特定词汇<br>
-<strong>粗体 bold</strong>用于强调核心内容</p>
-<p><a href="%22/%22">link here!</a></p>
+        <h2>Rules</h2>
+<h3>tags</h3>
+<p>only meta-tags are in all lowercase ('blog','test'), other tags like 'Translation' and 'Reading' needs to be capitalized (also, try to keep them within one word)</p>
+<h4>exsisting tags</h4>
 <ul>
-<li>This is a unordered list</li>
-<li>无序列表用什么装饰比较好看呢</li>
+<li>Translation</li>
+<li>Reading</li>
+<li>Frontend</li>
 </ul>
-<ol>
-<li>This is an ordered list</li>
-<li>嗯~ o(<em>￣▽￣</em>)o</li>
-</ol>
-<p>divider：</p>
-<hr>
-<hr>
-<p>图片测试
-<img src="/assets/unused/plaids.jpg" alt="这是图片" title="pic test"></p>
-<blockquote>
-<p>Dorothy followed her through many of the beautiful rooms in her castle.</p>
-<blockquote>
-<p>The Witch bade her clean the pots and kettles and sweep the floor and keep the fire fed with wood.</p>
-</blockquote>
-</blockquote>
-<p><code>code</code>
-<code>Use `code` in your Markdown file.</code></p>
-<pre><code class="language-js">function test() {
-  console.log(&quot;notice the blank line before this function?&quot;);
-}
-</code></pre>
-<pre><code class="language-css">section h1,
-#features li strong,
-header h2,
-footer p {
-	font: 100% Rockwell, Arvo, serif;
-}
-</code></pre>
+<h2>Goals:</h2>
+<ul>
+<li>Building a personal site using 11ty</li>
+<li>Minimun bugs &amp; brutal force</li>
+</ul>
+<h2>Problems encountered</h2>
+<h3>Deploy</h3>
+<h4>1. No 'pathPrefix' in .js</h4>
+<p>This will bomb all pathes in Github pages.
+And you have to use /.../ in njks, <a href="https://github.com/11ty/eleventy/issues/648">I think there are more solutions in this issue </a>, however, this doesn't work in non-njk files. An alternative way is using relative path: '../assets/...'</p>
 
       </div>
     </br>
     <p>Tags:
       &nbsp
-      blog
+      blog,test
     </p>
   </main>
 

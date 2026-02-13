@@ -1,4 +1,7 @@
-    const { DateTime } = require("luxon");
+const { DateTime } = require("luxon");
+const path = require("path");
+const fs = require("fs");
+
 module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy({ "public/assets": "assets" });
     eleventyConfig.addPassthroughCopy("src/assets");
@@ -14,7 +17,7 @@ module.exports = function (eleventyConfig) {
         excerpt_separator: "<!-- readmore -->",
     });
 
-
+    // date format
     eleventyConfig.addFilter("date", (value, format = "yyyy-MM-dd") => {
         if (!(value instanceof Date)) {
             return "Invalid Date";
@@ -23,16 +26,33 @@ module.exports = function (eleventyConfig) {
     });
 
     // tag页面生成
-    eleventyConfig.addCollection("tagList", function(collectionApi) {
+    eleventyConfig.addCollection("tagList", function (collectionApi) {
         const tagSet = new Set();
         collectionApi.getAll().forEach(item => {
-          (item.data.tags || []).forEach(tag => {
-            if (tag !== "blog") tagSet.add(tag);
-          });
+            (item.data.tags || []).forEach(tag => {
+                if (tag !== "blog") tagSet.add(tag);
+            });
         });
         return [...tagSet];
-      });
-    
+    });
+    // archive dates
+
+
+
+    eleventyConfig.addFilter("fileModifiedTime", function (inputPath) {
+        try {
+            const stats = fs.statSync(inputPath);
+            return stats.mtime;  //last modify
+        } catch (e) {
+            return null;
+        }
+    });
+
+
+
+
+
+
 
 
     return {

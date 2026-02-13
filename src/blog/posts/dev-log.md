@@ -3,7 +3,13 @@ title: Dev Log
 tags: ['blog','test']
 date: 2024-01-01
 ---
-
+## Rules
+### tags
+only meta-tags are in all lowercase ('blog','test'), other tags like 'Translation' and 'Reading' needs to be capitalized (also, try to keep them within one word)
+#### exsisting tags
+- Translation
+- Reading
+- Frontend
 ## Goals:
 - Building a personal site using 11ty
 - Minimun bugs & brutal force

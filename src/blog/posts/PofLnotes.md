@@ -1,7 +1,7 @@
 ---
 title: 《解放的悖论——世俗革命与宗教反革命》笔记
 date: 1998-01-01
-tags: blog
+tags: blog, Reading
 ---
 # 民族解放的悖论
 
